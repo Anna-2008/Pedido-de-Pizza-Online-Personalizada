@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pizzaria Divertida - Peça sua Pizza!</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topo">
+    <h1 class="logo">🍕 Pizzaria Divertida</h1>
+    <p class="sub">Monte sua pizza do seu jeitinho!</p>
+  </header>
+
+  <main class="conteudo">
+    <form id="pizzaForm" class="card">
+      <h2 class="titulo-form">Monte sua Pizza 😋</h2>
+
+      <!-- Dados pessoais -->
+      <div class="grupo">
+        <h3>🧑‍💼 Seus Dados</h3>
+        <label>Nome completo</label>
+        <input type="text" required placeholder="Seu nome..." />
+
+        <label>Telefone</label>
+        <input type="tel" required placeholder="(xx) xxxxx-xxxx" />
+
+        <label>Endereço</label>
+        <input type="text" required placeholder="Rua, número..." />
+      </div>
+
+      <!-- Pizza -->
+      <div class="grupo">
+        <h3>🍕 Sua Pizza</h3>
+
+        <label>Tamanho</label>
+        <select required>
+          <option value="">Escolha...</option>
+          <option value="pequena">Pequena</option>
+          <option value="media">Média</option>
+          <option value="grande">Grande</option>
+        </select>
+
+        <label>Borda</label>
+        <select required>
+          <option value="">Escolha...</option>
+          <option value="catupiry">Catupiry</option>
+          <option value="cheddar">Cheddar</option>
+          <option value="tradicional">Tradicional</option>
+        </select>
+
+        <label class="label-cima">Coberturas</label>
+        <div class="toppings">
+          <label><input type="checkbox"> Calabresa</label>
+          <label><input type="checkbox"> Mussarela</label>
+          <label><input type="checkbox"> Bacon</label>
+          <label><input type="checkbox"> Frango</label>
+          <label><input type="checkbox"> Azeitona</label>
+          <label><input type="checkbox"> Cebola</label>
+        </div>
+
+        <label>Observações</label>
+        <textarea rows="3" placeholder="ex.: sem cebola, mais queijo..."></textarea>
+      </div>
+
+      <!-- Pagamento -->
+      <div class="grupo">
+        <h3>💳 Pagamento</h3>
+        <div class="pagamento">
+          <label><input type="radio" name="pagamento"> PIX</label>
+          <label><input type="radio" name="pagamento"> Cartão</label>
+          <label><input type="radio" name="pagamento"> Dinheiro</label>
+        </div>
+      </div>
+
+      <button class="btn-enviar" type="submit">✨ Finalizar Pedido</button>
+    </form>
+  </main>
+
+  <footer class="rodape">
+    <p>🍕 Feito com amor — Pizzaria Divertida</p>
+  </footer>
+
+<script>
+  document.getElementById("pizzaForm").addEventListener("submit", (e) => {
+    e.preventDefault();
+    alert("Pedido enviado! 😄");
+  });
+</script>
+
+</body>
+</html>

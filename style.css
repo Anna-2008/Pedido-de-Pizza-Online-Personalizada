@@ -1,0 +1,117 @@
+/* Fonte divertida */
+:root {
+  --vermelho: #ff4e4e;
+  --amarelo: #ffd342;
+  --verde: #3bbf64;
+  --fundo: #fff7e6;
+  --card: #ffffff;
+  --sombra: rgba(0,0,0,0.12);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--fundo);
+  font-family: "Inter", sans-serif;
+}
+
+/* Cabeçalho */
+.topo {
+  text-align: center;
+  padding: 25px 0;
+  background: var(--vermelho);
+  color: white;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.logo {
+  font-family: "Fredoka One", cursive;
+  font-size: 2.4rem;
+}
+
+.sub {
+  margin-top: 5px;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* Card */
+.conteudo {
+  width: min(900px, 90%);
+  margin: 25px auto;
+}
+
+.card {
+  background: var(--card);
+  padding: 25px;
+  border-radius: 25px;
+  box-shadow: 0 8px 30px var(--sombra);
+  animation: descer 0.5s ease;
+}
+
+@keyframes descer {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.titulo-form {
+  text-align: center;
+  font-family: "Fredoka One";
+  margin-bottom: 15px;
+  color: var(--vermelho);
+  font-size: 1.8rem;
+}
+
+.grupo {
+  margin-top: 20px;
+}
+
+.grupo h3 {
+  font-family: "Fredoka One";
+  color: var(--verde);
+  margin-bottom: 10px;
+}
+
+/* Inputs */
+label {
+  font-weight: 500;
+}
+
+input, select, textarea {
+  width: 100%;
+  margin: 6px 0 12px;
+  padding: 12px;
+  border: 2px solid #ffe8b3;
+  border-radius: 12px;
+  font-size: 1rem;
+  background: #fffdf5;
+  transition: 0.2s;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: var(--amarelo);
+  background: #fff8d6;
+}
+
+/* Toppings */
+.toppings {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 8px;
+}
+
+.toppings label {
+  background: #fff4cc;
+  border-radius: 12px;
+  padding: 8px 12px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  cursor: pointer;
+  border: 1.5px sol
+}
